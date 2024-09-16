@@ -1,12 +1,12 @@
-import type { Config } from "tailwindcss"
+import type {Config} from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -35,28 +35,28 @@ const config = {
     extend: {
       fontFamily: {
         sora: "var(--font-sora)",
-    },
-    backgroundImage: {
-      cover: "url('../assets/cover.png')",
-
-  },
-    colors: {
-      primary: "#0C2140",
-      secondary: "#063272",
-      tertiary: "#58FFC3",
-      white: "#FFFFFF",
-      gray: "#666666",
-      lines: "#00000026",
-      error: "#bd0a0a"
-    },
+      },
+      colors: {
+        primary: "#0C2140",
+        secondary: "#091a34",
+        tertiary: "#0B76BB",
+        quaternary: "#58FFC3",
+        white: "#FFFFFF",
+        gray: "#666666",
+        lines: "#00000026",
+        error: "#bd0a0a",
+      },
+      backgroundImage: {
+        coverImage: "url('../assets/images/cover.png')",
+      },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: {height: "0"},
+          to: {height: "var(--radix-accordion-content-height)"},
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          from: {height: "var(--radix-accordion-content-height)"},
+          to: {height: "0"},
         },
       },
       animation: {
@@ -66,6 +66,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

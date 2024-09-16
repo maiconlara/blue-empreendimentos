@@ -1,4 +1,5 @@
-import {LoadingIcon} from "@/assets/icons";
+import { IconLoader2 } from "@tabler/icons-react";
+
 import {Button} from "./button";
 
 interface SubmitButtonProps {
@@ -7,7 +8,7 @@ interface SubmitButtonProps {
   form: string;
 }
 
-const SubmitButton = ({
+export const SubmitButton = ({
   isLoading = false,
   form,
   children,
@@ -16,18 +17,14 @@ const SubmitButton = ({
     <Button
       type="submit"
       form={form}
-      className="flex bg-blue-secondary hover:bg-blue-hover transition-colors cursor-pointer w-auto min-w-[250px] px-4 h-12 items-center justify-center rounded text-white-off font-regular text-[14px] leading-4"
+      className={`${isLoading ? "cursor-wait" : "cursor-pointer"} flex bg-[#0B76BB] rounded-full hover:bg-[#0B76BB]/80 transition-all w-full px-4 h-12 items-center justify-center  text-white-off font-regular text-[14px] leading-4`}
       disabled={isLoading}
     >
       {isLoading ? (
-        <div className="animate-spin">
-          <LoadingIcon w={28} h={28} />
-        </div>
+          <IconLoader2 className="h-5 w-5 text-white animate-spin" />
       ) : (
         children
       )}
     </Button>
   );
 };
-
-export default SubmitButton;
