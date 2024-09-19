@@ -2,7 +2,8 @@ import {IconLock, IconMail} from "@tabler/icons-react";
 import {Input, SubmitButton} from "@/components/ui";
 import type {Metadata} from "next";
 import Link from "next/link"
-
+import Image from "next/image"
+import {cover} from "@/assets/images"
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Login | Blue",
@@ -12,8 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function Home() {
   return (
     <div className="relative flex h-[calc(100vh-8rem)] min-h-[calc(100vh-8rem)] pb-40 w-full flex-col items-start justify-start overflow-hidden text-white px-20">
-      <div className="absolute inset-0 max-w-screen min-h-[5000px] bg-coverImage bg-contain -z-10"></div>
- 
+      <Image alt="" className="absolute inset-0 w-full h-full -z-10 object-cover" src={cover} priority />
       <div className="flex flex-col w-full items-end justify-center h-full">
         <div className="flex flex-col w-[600px] rounded-3xl p-6 gap-12">
           <p className="flex w-full items-center justify-center text-2xl font-bold">
