@@ -1,3 +1,4 @@
+export * from "./password-recovery"
 export * from "./dropdown-menu";
 export * from "./submit-button";
 export * from "./masked-input";

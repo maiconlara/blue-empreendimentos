@@ -24,7 +24,7 @@ export default async function Home() {
             <Input Icon={RiMailFill} placeholder="Email" />
             <Input Icon={RiLock2Fill} placeholder="Senha" />
             <div className="flex text-sm flex-row w-full items-center justify-end  ">
-              <p className="cursor-pointer hover:underline hover:underline-offset-1 transition-all">Esqueceu sua senha?</p>
+              <Link href="/redefinir-senha" className="cursor-pointer hover:underline hover:underline-offset-1 transition-all">Esqueceu sua senha?</Link>
             </div>
             <Link className="flex w-full" href="/painel">
             <SubmitButton form="login" isLoading={false}>
