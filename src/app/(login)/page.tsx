@@ -1,5 +1,5 @@
-import {IconLock, IconMail} from "@tabler/icons-react";
 import {Input, SubmitButton} from "@/components/ui";
+import { RiLock2Fill, RiMailFill } from "@remixicon/react";
 import type {Metadata} from "next";
 import Link from "next/link"
 import Image from "next/image"
@@ -20,10 +20,9 @@ export default async function Home() {
             Faça login no Painel{" "}
             <span className="text-tertiary">&nbsp;Blue</span>
           </p>
-          {/* <p className="flex w-full items-center justify-center text-2xl font-bold text-primary">Faça login no Painel <span className="text-tertiary">&nbsp;Blue</span></p> */}
           <div className="flex flex-col w-full gap-7">
-            <Input Icon={IconMail} placeholder="Email" />
-            <Input Icon={IconLock} placeholder="Senha" />
+            <Input Icon={RiMailFill} placeholder="Email" />
+            <Input Icon={RiLock2Fill} placeholder="Senha" />
             <div className="flex text-sm flex-row w-full items-center justify-end  ">
               <p className="cursor-pointer hover:underline hover:underline-offset-1 transition-all">Esqueceu sua senha?</p>
             </div>

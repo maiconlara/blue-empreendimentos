@@ -70,7 +70,6 @@ export default async function RootLayout({
       </head>
       <body
         className={`${Sora.variable} flex min-h-screen w-screen flex-col items-start justify-start overflow-x-hidden font-sora bg-primary`}
-        // className={`${Sora.variable} flex min-h-screen w-screen flex-col items-start justify-start overflow-x-hidden font-sora bg-primary`}
       >
         {children}
       </body>

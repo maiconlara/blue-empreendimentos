@@ -3,7 +3,7 @@
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import { ChevronDownIcon } from "@radix-ui/react-icons"
-
+import {RiArrowDownSLine} from "@remixicon/react";
 import { cn } from "@/lib/utils"
 
 const Accordion = AccordionPrimitive.Root
@@ -14,7 +14,7 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn("bg-white-full border-0 px-16 mb-7 rounded-md", className)}
+    className={cn("bg-white-full border-0 rounded-md", className)}
     {...props}
   />
 ))
@@ -28,13 +28,13 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 leading-10 text-[20px] font-normal text-start items-center justify-between py-4  transition-all  [&[data-state=open]>svg]:rotate-180",
+        "flex flex-1 leading-10 text-[20px] font-normal text-start items-center justify-between py-4  [&[data-state=open]>.arrow-icon]:rotate-180",
         className
       )}
       {...props}
     >
       {children}
-      <ChevronDownIcon className="h-8 w-8 shrink-0 text-[#000] transition-transform duration-200 dark:text-slate-400" />
+      <RiArrowDownSLine className=" arrow-icon h-[18px] w-[18px] text-white ml-auto transition-transform" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
@@ -46,10 +46,10 @@ const AccordionContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden pb-4 text-sm subpixel-antialiased text-gray data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    className="overflow-hidden text-sm subpixel-antialiased text-gray data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
-    <div className={cn("pb-4 pt-0", className)}>{children}</div>
+    <div className={cn(" pt-0", className)}>{children}</div>
   </AccordionPrimitive.Content>
 ))
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
