@@ -17,7 +17,8 @@ import {
   RiMacFill,
   RiPhoneFill,
   RiPieChart2Fill,
-  RiBox3Fill
+  RiBox3Fill,
+  RiLogoutBoxRFill,
 } from "@remixicon/react";
 
 import {SidebarDropdown} from "./sidebar-dropdown";
@@ -25,6 +26,7 @@ import {SidebarLink} from "./sidebar-link";
 import {logoWhite} from "@/assets/images";
 import Image from "next/image";
 import {SidebarItemProps} from "@/types";
+import Link from "next/link";
 
 const SidebarItems: SidebarItemProps[] = [
   {
@@ -81,7 +83,6 @@ const SidebarItems: SidebarItemProps[] = [
         href: "/painel/fluxo",
         isSub: true,
       },
-     
     ],
   },
   {
@@ -154,6 +155,14 @@ export const Sidebar = () => {
             <SidebarDropdown key={index} {...item} />
           )
         )}
+
+        <Link
+        href="/"
+          className={` mt-auto flex flex-row w-full gap-2 rounded-md py-2 px-3 transition-colors items-center cursor-pointer group`}
+        >
+          <RiLogoutBoxRFill className="h-[18px] w-[18px] text-white cursor-pointer group-hover:text-white/60  transition-colors" />
+          <p className="text-white text-sm group-hover:text-white/60 transition-colors">Sair</p>
+        </Link>
       </div>
     </div>
   );
