@@ -1,6 +1,6 @@
 "use client";
 
-import {RiMailFill, RiArrowRightSLine} from "@remixicon/react";
+import {RiMailFill} from "@remixicon/react";
 import {Input, SubmitButton} from "@/components/ui";
 import {Dispatch, SetStateAction} from "react";
 import {RecoverySteps} from "@/types";

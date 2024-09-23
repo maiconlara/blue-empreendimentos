@@ -43,6 +43,7 @@ const config = {
         quaternary: "#58FFC3",
         white: "#FFFFFF",
         gray: "#666666",
+        divider: "#cdcdcd",
         lines: "#00000026",
         error: "#bd0a0a",
       },
