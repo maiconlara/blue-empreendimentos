@@ -46,7 +46,7 @@ export function Combobox({placeholder, items}: ComboboxProps) {
       </PopoverTrigger>
       <PopoverContent className="w-[180px] p-0 border-divider">
         <Command>
-          <CommandInput placeholder={placeholder || "Buscar..."} />
+          <CommandInput placeholder={"Buscar..."} />
           <CommandList>
             <CommandEmpty>Sem resultados.</CommandEmpty>
             <CommandGroup>
