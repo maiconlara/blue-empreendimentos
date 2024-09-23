@@ -38,49 +38,49 @@ const SidebarItems: SidebarItemProps[] = [
         type: "link",
         title: "Investidor",
         Icon: RiUser2Fill,
-        href: "/painel/investidor",
+        href: "painel/investidor",
         isSub: true,
       },
       {
         type: "link",
         title: "Power BI",
         Icon: RiPieChart2Fill,
-        href: "/painel/bi",
+        href: "painel/bi",
         isSub: true,
       },
       {
         type: "link",
         title: "Informativos",
         Icon: RiArticleFill,
-        href: "/painel/informativos",
+        href: "painel/informativos",
         isSub: true,
       },
       {
         type: "link",
         title: "Rendimentos",
         Icon: RiMoneyDollarCircleFill,
-        href: "/painel/rendimentos",
+        href: "painel/rendimentos",
         isSub: true,
       },
       {
         type: "link",
         title: "Planejamento",
         Icon: RiCalendarScheduleFill,
-        href: "/painel/planejamento",
+        href: "painel/planejamento",
         isSub: true,
       },
       {
         type: "link",
         title: "Empreendimento",
         Icon: RiCommunityFill,
-        href: "/painel/empreendimento",
+        href: "painel/empreendimento",
         isSub: true,
       },
       {
         type: "link",
         title: "Fluxo de Aporte",
         Icon: RiFlowChart,
-        href: "/painel/fluxo",
+        href: "painel/fluxo",
         isSub: true,
       },
     ],
@@ -94,28 +94,28 @@ const SidebarItems: SidebarItemProps[] = [
         type: "link",
         title: "Projetos",
         Icon: RiBuilding4Fill,
-        href: "/painel/projetos",
+        href: "painel/projetos",
         isSub: true,
       },
       {
         type: "link",
         title: "Blue na Mídia",
         Icon: RiMacFill,
-        href: "/painel/blue-midia",
+        href: "painel/blue-midia",
         isSub: true,
       },
       {
         type: "link",
         title: "Dados de Contato",
         Icon: RiPhoneFill,
-        href: "/painel/blue-midia",
+        href: "painel/blue-midia",
         isSub: true,
       },
       {
         type: "link",
         title: "Conteúdos",
         Icon: RiBox3Fill,
-        href: "/painel/blue-midia",
+        href: "painel/blue-midia",
         isSub: true,
       },
     ],
@@ -124,13 +124,13 @@ const SidebarItems: SidebarItemProps[] = [
     type: "link",
     title: "Usuários",
     Icon: RiGroupFill,
-    href: "/painel/usuarios",
+    href: "painel/usuarios",
   },
   {
     type: "link",
     title: "Gerador de Links",
     Icon: RiLinksFill,
-    href: "/painel/links",
+    href: "painel/links",
   },
 ];
 
@@ -144,7 +144,7 @@ export const Sidebar = () => {
           priority
           className="h-auto w-[110px] pb-6"
         />
-        <SidebarLink href="/painel" title="Página Inicial" Icon={RiHome4Fill} />
+        <SidebarLink href="painel" title="Página Inicial" Icon={RiHome4Fill} />
         <div className="flex flex-col w-full px-3 max-h-[1px] h-[1px] my-1">
           <div className="flex flex-1 w-full bg-white/10 max-h-[1px] h-[1px]" />
         </div>
