@@ -1,2 +1,2 @@
 
-export type RecoverySteps = "email" | "code";
+export type RecoverySteps = "email" | "code"  | "password";

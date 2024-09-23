@@ -1,16 +1,16 @@
 "use client";
 
-import {RiMailFill, RiArrowRightSLine} from "@remixicon/react";
+import {RiMailFill, RiLock2Fill} from "@remixicon/react";
 import {Input, SubmitButton} from "@/components/ui";
 import {Dispatch, SetStateAction} from "react";
 import {RecoverySteps} from "@/types";
 import Link from "next/link";
 
-interface EmailFormProps {
+interface PasswordFormProps {
   setRecoveryStep: Dispatch<SetStateAction<RecoverySteps>>;
 }
 
-export const EmailForm = ({setRecoveryStep}: EmailFormProps) => {
+export const PasswordForm = ({setRecoveryStep}: PasswordFormProps) => {
   return (
     <div className="flex flex-col w-[600px] min-h-[328px] rounded-3xl p-6 gap-12">
       <div className="flex flex-col gap-2">
@@ -18,20 +18,17 @@ export const EmailForm = ({setRecoveryStep}: EmailFormProps) => {
           Redefinir Senha
         </p>
         <p className="flex w-full items-center justify-center text-sm text-center">
-          Insira um e-mail para redefinir a sua senha.
+          Por favor, insira a senha desejada.
         </p>
       </div>
       <div className="flex flex-col w-full gap-7">
-        <Input Icon={RiMailFill} placeholder="Email" />
-        <div 
-        onClick={() => {
-          setRecoveryStep("code");
-        }}
-        className="flex w-full" >
+        <Input Icon={RiLock2Fill} placeholder="Nova senha" />
+        <Input Icon={RiLock2Fill} placeholder="Confirmar nova senha" />
+        <Link href="/" className="flex w-full" >
           <SubmitButton form="login" isLoading={false}>
-            Confirmar
+            Redefinir
           </SubmitButton>
-        </div>
+        </Link>
       </div>
     </div>
   );
